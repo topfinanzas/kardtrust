@@ -1,5 +1,7 @@
-fix(seo): update robots rules for ad crawler access
+chore: Cleanup legacy Google Ads and GTM tracking configurations
 
-- simplify robots.txt directives
-- allow Mediapartners-Google crawlers to access /api/
-- retain sitemap declaration
+- Removed duplicate/legacy Google Ads tracking (`components/analytics/google-ads.tsx`) and an unused GTM configuration component (`components/GoogleTagManager.tsx`).
+- Cleaned up tracking script references in `app/layout.tsx`, `components/credit-card-form.tsx`, and `components/credit-card-form-to-product.tsx` to prevent incorrect tag fires and duplicate initializations.
+- Included recent content adjustments to various financial-solutions pages.
+- Minor UI refinements in badge, button, and sheet components.
+- Documentation tweaks to UK_TO_US_CREDIT_CARD_MIGRATION and ADZEP_IMPLEMENTATION.

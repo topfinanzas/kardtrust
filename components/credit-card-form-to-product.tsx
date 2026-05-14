@@ -16,7 +16,6 @@ import {
 } from "@/lib/constants";
 import { step1Strings, step2Strings } from "@/lib/strings";
 import { pushGTMConversion } from "@/components/analytics/gtm";
-import { trackGoogleAdsConversion } from "@/components/analytics/google-ads";
 import { redirectWithUtmParams } from "@/lib/utils/url-builder";
 
 type SubmissionStatus = "idle" | "success" | "duplicate" | "error";
@@ -104,14 +103,6 @@ export default function CreditCardFormToProduct() {
   }, []);
 
   const triggerConversionEvents = useCallback(() => {
-    if (!GOOGLE_ADS_CONVERSION_LABEL) {
-      console.warn(
-        "[QUIZ] Google Ads conversion label is not configured; skipping Ad conversion event.",
-      );
-    } else {
-      trackGoogleAdsConversion(GOOGLE_ADS_CONVERSION_LABEL);
-    }
-
     pushGTMConversion(GTM_CONVERSION_EVENT_NAME);
   }, []);
 

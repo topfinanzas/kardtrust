@@ -135,16 +135,15 @@ export default function VaroBelieveCardPage() {
 
               <div className="my-6">
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
-                  The Varo Visa® Believe Credit Card represents a paradigm
-                  shift in the secured credit card market. Traditional secured
-                  cards have long required substantial upfront
-                  deposits—typically $200-$300—which creates a significant
-                  barrier for individuals trying to build or rebuild credit.
-                  Many people who need credit building tools the most are those
-                  who can least afford to lock up hundreds of dollars in
-                  security deposits. Varo eliminates this barrier entirely while
-                  still providing all the credit-building benefits of a
-                  traditional secured card.
+                  The Varo Visa® Believe Credit Card represents a paradigm shift
+                  in the secured credit card market. Traditional secured cards
+                  have long required substantial upfront deposits—typically
+                  $200-$300—which creates a significant barrier for individuals
+                  trying to build or rebuild credit. Many people who need credit
+                  building tools the most are those who can least afford to lock
+                  up hundreds of dollars in security deposits. Varo eliminates
+                  this barrier entirely while still providing all the
+                  credit-building benefits of a traditional secured card.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">

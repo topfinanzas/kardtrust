@@ -39,20 +39,19 @@ export default function CitiCustomCashCardRequirementsPage() {
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
-                The Citi Custom Cash® Card represents one of the most
-                innovative cash back credit cards available in the United
-                States, offering automatic 5% cash back on your top spending
-                category without requiring activation or enrollment. While Citi
-                maintains reasonable eligibility criteria to ensure responsible
-                credit usage, the card is generally accessible to applicants
-                with good to excellent credit who demonstrate financial
-                stability. Importantly, Citi enforces a strict
-                one-card-per-person policy for the Custom Cash® Card and
-                imposes a 48-month restriction on welcome bonus eligibility for
-                those who have previously held the card or converted from
-                another Citi product. Here's everything you need to know about
-                qualifying, applying, and understanding the costs associated
-                with this intelligent rewards card.
+                The Citi Custom Cash® Card represents one of the most innovative
+                cash back credit cards available in the United States, offering
+                automatic 5% cash back on your top spending category without
+                requiring activation or enrollment. While Citi maintains
+                reasonable eligibility criteria to ensure responsible credit
+                usage, the card is generally accessible to applicants with good
+                to excellent credit who demonstrate financial stability.
+                Importantly, Citi enforces a strict one-card-per-person policy
+                for the Custom Cash® Card and imposes a 48-month restriction on
+                welcome bonus eligibility for those who have previously held the
+                card or converted from another Citi product. Here's everything
+                you need to know about qualifying, applying, and understanding
+                the costs associated with this intelligent rewards card.
               </p>
 
               <div className="my-8 text-left sm:text-left">
@@ -177,9 +176,9 @@ export default function CitiCustomCashCardRequirementsPage() {
                       restrict you to reporting only personal income or income
                       for which you're a co-signer or guarantor. While Citi
                       doesn't publish minimum income requirements for the Custom
-                      Cash® Card, having stable, verifiable income
-                      significantly improves approval chances and typically
-                      results in higher initial credit limits.
+                      Cash® Card, having stable, verifiable income significantly
+                      improves approval chances and typically results in higher
+                      initial credit limits.
                     </div>
                   </div>
 
@@ -376,13 +375,13 @@ export default function CitiCustomCashCardRequirementsPage() {
                 </p>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
                   <strong>Foreign Transaction Fee:</strong> 3% of each
-                  transaction in US dollars - The Citi Custom Cash® Card
-                  charges a foreign transaction fee of 3% on purchases made
-                  outside the United States or with foreign merchants. If you
-                  travel internationally frequently or make regular foreign
-                  purchases, consider pairing this card with a
-                  no-foreign-transaction-fee card for international spending
-                  while using the Custom Cash for domestic 5% category earning.
+                  transaction in US dollars - The Citi Custom Cash® Card charges
+                  a foreign transaction fee of 3% on purchases made outside the
+                  United States or with foreign merchants. If you travel
+                  internationally frequently or make regular foreign purchases,
+                  consider pairing this card with a no-foreign-transaction-fee
+                  card for international spending while using the Custom Cash
+                  for domestic 5% category earning.
                 </p>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
                   <strong>Late Payment Fee:</strong> Up to $40 if you fail to
@@ -393,8 +392,8 @@ export default function CitiCustomCashCardRequirementsPage() {
                   29.99%, damage your credit score significantly (drops of
                   60-110 points for a single 30-day late payment), and result in
                   loss of promotional APR offers. Set up automatic payments
-                  through Citi Online or the Citi Mobile® App to avoid late
-                  fees and protect your credit score.
+                  through Citi Online or the Citi Mobile® App to avoid late fees
+                  and protect your credit score.
                 </p>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
                   <strong>Returned Payment Fee:</strong> Up to $40 if your
@@ -504,9 +503,9 @@ export default function CitiCustomCashCardRequirementsPage() {
                   mail within 7-10 business days. Once received, activate your
                   card immediately by calling the activation phone number on the
                   sticker attached to the card, online through Citi Online, or
-                  via the Citi Mobile® App. Set up your online account access
-                  if you're not already a Citi customer, enroll in Citi Online
-                  for online account management, enable paperless statements to
+                  via the Citi Mobile® App. Set up your online account access if
+                  you're not already a Citi customer, enroll in Citi Online for
+                  online account management, enable paperless statements to
                   reduce clutter and help the environment, set up autopay or
                   payment reminders to avoid late fees, and explore your
                   ThankYou® Points account for reward redemption options.
@@ -602,18 +601,18 @@ export default function CitiCustomCashCardRequirementsPage() {
                       Card cannot be transferred to airline or hotel loyalty
                       programs. Point transfers to partners like Emirates,
                       Singapore Airlines, JetBlue, and Wyndham Hotels are
-                      exclusive to Citi's premium ThankYou® Points-earning
-                      cards such as the Citi Premier® Card and Citi Prestige®
-                      Card. However, you can redeem Custom Cash points for cash
-                      back (statement credit, direct deposit, or check), gift
-                      cards, travel bookings through Citi Travel, merchandise,
-                      Shop with Points at Amazon.com, student loan payments,
-                      mortgage payments, and charitable donations. If you want
-                      transfer capabilities, consider pairing the Custom Cash
-                      with the Citi Premier® Card—points from both cards pool
-                      into your ThankYou® account, and once pooled, you can
-                      transfer the combined balance to airline/hotel partners
-                      using the Premier's transfer capabilities.
+                      exclusive to Citi's premium ThankYou® Points-earning cards
+                      such as the Citi Premier® Card and Citi Prestige® Card.
+                      However, you can redeem Custom Cash points for cash back
+                      (statement credit, direct deposit, or check), gift cards,
+                      travel bookings through Citi Travel, merchandise, Shop
+                      with Points at Amazon.com, student loan payments, mortgage
+                      payments, and charitable donations. If you want transfer
+                      capabilities, consider pairing the Custom Cash with the
+                      Citi Premier® Card—points from both cards pool into your
+                      ThankYou® account, and once pooled, you can transfer the
+                      combined balance to airline/hotel partners using the
+                      Premier's transfer capabilities.
                     </p>
                   </div>
 
@@ -634,12 +633,11 @@ export default function CitiCustomCashCardRequirementsPage() {
                       you're considering closing the card due to wanting
                       different benefits, explore product change options with
                       Citi—you might be able to convert your Custom Cash to a
-                      different Citi card (like the Double Cash® or
-                      Simplicity®) while preserving your credit history and
-                      keeping the account open, though you'd lose the Custom
-                      Cash benefits. Contact Citi customer service to discuss
-                      product change alternatives before closing the account
-                      permanently.
+                      different Citi card (like the Double Cash® or Simplicity®)
+                      while preserving your credit history and keeping the
+                      account open, though you'd lose the Custom Cash benefits.
+                      Contact Citi customer service to discuss product change
+                      alternatives before closing the account permanently.
                     </p>
                   </div>
 
@@ -676,16 +674,16 @@ export default function CitiCustomCashCardRequirementsPage() {
                 </h3>
                 <p className="text-sm text-gray-700 leading-5 mb-3 text-left">
                   <strong>Representative APR Example:</strong> The Citi Custom
-                  Cash® Card has a variable APR of 17.99% - 27.99% for
-                  purchases based on your creditworthiness. If you carry a
-                  balance of $3,000 at the midpoint APR of 22.99% and make only
-                  minimum payments, you would pay approximately $689 in interest
-                  charges over one year. To avoid interest charges entirely, pay
-                  your full statement balance by the due date each month.
-                  Balance transfer intro APR: 0% for 18 months on transfers
-                  completed within 4 months of account opening; thereafter
-                  17.99% - 27.99% variable APR. Balance transfer fee: $5 or 5%
-                  of each transfer, whichever is greater.
+                  Cash® Card has a variable APR of 17.99% - 27.99% for purchases
+                  based on your creditworthiness. If you carry a balance of
+                  $3,000 at the midpoint APR of 22.99% and make only minimum
+                  payments, you would pay approximately $689 in interest charges
+                  over one year. To avoid interest charges entirely, pay your
+                  full statement balance by the due date each month. Balance
+                  transfer intro APR: 0% for 18 months on transfers completed
+                  within 4 months of account opening; thereafter 17.99% - 27.99%
+                  variable APR. Balance transfer fee: $5 or 5% of each transfer,
+                  whichever is greater.
                 </p>
                 <p className="text-sm text-gray-700 leading-5 mb-3 text-left">
                   <strong>Credit Impact:</strong> Applying for a credit card

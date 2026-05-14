@@ -27,8 +27,8 @@ export default function ChaseFreedomUnlimitedCreditCardBenefitsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-8">
-              Chase Freedom Unlimited®: Flat Cash Back Powerhouse with $0
-              Annual Fee
+              Chase Freedom Unlimited®: Flat Cash Back Powerhouse with $0 Annual
+              Fee
             </h1>
 
             <div
@@ -91,8 +91,8 @@ export default function ChaseFreedomUnlimitedCreditCardBenefitsPage() {
                 Everyday Rewards That Scale Automatically
               </h2>
               <p className="text-gray-700 mb-6 leading-6">
-                Use Freedom Unlimited® as your all-purpose card: 1.5% applies
-                to every swipe, while dining, drugstores, and Chase Travel℠
+                Use Freedom Unlimited® as your all-purpose card: 1.5% applies to
+                every swipe, while dining, drugstores, and Chase Travel℠
                 purchases unlock higher tiers without activation checklists.
               </p>
 

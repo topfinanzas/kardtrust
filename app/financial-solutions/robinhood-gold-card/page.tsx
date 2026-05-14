@@ -391,9 +391,7 @@ export default function RobinhoodGoldCardPage() {
                       <span className="text-gray-900 font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5 text-left">
-                      <span className="font-semibold">
-                        Roadside Dispatch®:
-                      </span>{" "}
+                      <span className="font-semibold">Roadside Dispatch®:</span>{" "}
                       Connect to emergency roadside assistance services
                       including towing, jump starts, flat tire changes, lockout
                       service, and fuel delivery. While you pay for services

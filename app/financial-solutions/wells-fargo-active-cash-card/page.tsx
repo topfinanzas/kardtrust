@@ -241,8 +241,8 @@ export default function WellsFargoActiveCashCardPage() {
                   Maximizing the 0% Intro APR Opportunity
                 </h2>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
-                  The Wells Fargo Active Cash® Card's 0% intro APR for 12
-                  months on purchases and qualifying balance transfers provides
+                  The Wells Fargo Active Cash® Card's 0% intro APR for 12 months
+                  on purchases and qualifying balance transfers provides
                   exceptional financial flexibility for both new purchases and
                   debt consolidation. This intro APR period applies to balance
                   transfers made within 120 days of account opening, giving new
@@ -255,16 +255,16 @@ export default function WellsFargoActiveCashCardPage() {
                   The balance transfer feature proves particularly valuable for
                   consumers carrying high-interest credit card debt. By
                   transferring balances from cards charging 20-29% APR to the
-                  Active Cash® during the intro period, you can save
-                  substantial amounts in interest charges while paying down
-                  principal. For example, if you transfer $6,000 from a card
-                  charging 24% APR and pay it off over the 12-month intro
-                  period, you'd save approximately $768 in interest charges
-                  (even accounting for the balance transfer fee). Wells Fargo
-                  charges either $5 or 5% of the amount of each transfer,
-                  whichever is greater, for balance transfers—a standard fee
-                  structure in the industry that typically pays for itself many
-                  times over through interest savings.
+                  Active Cash® during the intro period, you can save substantial
+                  amounts in interest charges while paying down principal. For
+                  example, if you transfer $6,000 from a card charging 24% APR
+                  and pay it off over the 12-month intro period, you'd save
+                  approximately $768 in interest charges (even accounting for
+                  the balance transfer fee). Wells Fargo charges either $5 or 5%
+                  of the amount of each transfer, whichever is greater, for
+                  balance transfers—a standard fee structure in the industry
+                  that typically pays for itself many times over through
+                  interest savings.
                 </p>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
                   The purchase APR offer is equally valuable for planned large
@@ -346,16 +346,16 @@ export default function WellsFargoActiveCashCardPage() {
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
                   The auto rental collision damage waiver provides secondary
                   coverage when you decline the rental company's collision
-                  insurance and pay for the entire rental with your Active
-                  Cash® card. This can save $15-$30 per day in rental car
-                  insurance charges, quickly adding up to $100+ in savings on a
-                  week-long rental. Travel and emergency assistance services
-                  provide 24/7 assistance anywhere in the world for emergency
-                  travel needs, medical referrals, legal referrals, and
-                  emergency cash advances. The Roadside Dispatch® service
-                  offers 24/7 emergency towing and roadside assistance with no
-                  membership required—a benefit typically requiring $50-$100
-                  annual AAA memberships or similar services.
+                  insurance and pay for the entire rental with your Active Cash®
+                  card. This can save $15-$30 per day in rental car insurance
+                  charges, quickly adding up to $100+ in savings on a week-long
+                  rental. Travel and emergency assistance services provide 24/7
+                  assistance anywhere in the world for emergency travel needs,
+                  medical referrals, legal referrals, and emergency cash
+                  advances. The Roadside Dispatch® service offers 24/7 emergency
+                  towing and roadside assistance with no membership required—a
+                  benefit typically requiring $50-$100 annual AAA memberships or
+                  similar services.
                 </p>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
                   Additional Visa Signature perks include access to the Visa
@@ -396,12 +396,12 @@ export default function WellsFargoActiveCashCardPage() {
                   flexible redemption options and user-friendly rewards program.
                 </p>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
-                  This consistent industry recognition reflects the Active
-                  Cash® Card's exceptional value proposition: unlimited 2% cash
-                  back on all purchases with no annual fee, no foreign
-                  transaction fees, comprehensive Visa Signature benefits, and
-                  flexible redemption options. Few cards in the market offer
-                  this combination of simplicity, earning power, and premium
+                  This consistent industry recognition reflects the Active Cash®
+                  Card's exceptional value proposition: unlimited 2% cash back
+                  on all purchases with no annual fee, no foreign transaction
+                  fees, comprehensive Visa Signature benefits, and flexible
+                  redemption options. Few cards in the market offer this
+                  combination of simplicity, earning power, and premium
                   protections without charging annual fees or requiring complex
                   category management. The card's position as "our best cash
                   back credit card on everyday purchases" (per Wells Fargo's own

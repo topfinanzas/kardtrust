@@ -44,12 +44,12 @@ export default function WellsFargoActiveCashCardRequirementsPage() {
                 combining unlimited 2% cash back on all purchases with no annual
                 fee and comprehensive Visa Signature benefits. While Wells Fargo
                 maintains reasonable eligibility criteria to ensure responsible
-                credit usage, the Active Cash® Card is generally more
-                accessible than many premium rewards cards and serves as an
-                excellent option for consumers with good to excellent credit.
-                Here's everything you need to know about qualifying, applying,
-                and understanding the costs associated with the Wells Fargo
-                Active Cash® Card.
+                credit usage, the Active Cash® Card is generally more accessible
+                than many premium rewards cards and serves as an excellent
+                option for consumers with good to excellent credit. Here's
+                everything you need to know about qualifying, applying, and
+                understanding the costs associated with the Wells Fargo Active
+                Cash® Card.
               </p>
 
               <div className="my-8 text-left sm:text-left">
@@ -321,11 +321,11 @@ export default function WellsFargoActiveCashCardRequirementsPage() {
                   Understanding the Costs: APR, Fees & Charges
                 </h2>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
-                  <strong>Annual Fee:</strong> $0 - The Wells Fargo Active
-                  Cash® Card charges no annual fee, making it one of the most
-                  valuable premium rewards cards available without ongoing
-                  yearly costs. You'll never pay a fee simply to keep this card
-                  active, regardless of how much or how little you use it.
+                  <strong>Annual Fee:</strong> $0 - The Wells Fargo Active Cash®
+                  Card charges no annual fee, making it one of the most valuable
+                  premium rewards cards available without ongoing yearly costs.
+                  You'll never pay a fee simply to keep this card active,
+                  regardless of how much or how little you use it.
                 </p>
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
                   <strong>Purchase APR:</strong> 0% intro APR for 12 months from
@@ -476,17 +476,16 @@ export default function WellsFargoActiveCashCardRequirementsPage() {
                   standard mail within 7-10 business days. Once received,
                   activate your card immediately by calling the activation phone
                   number on the sticker attached to the card, online through
-                  Wells Fargo Online®, or via the Wells Fargo mobile app. Set
-                  up your online account access if you're not already a Wells
-                  Fargo customer, enroll in Wells Fargo Online® for online
-                  account management, enable paperless statements to avoid
-                  potential paper statement fees, set up autopay or payment
-                  reminders to avoid late fees, enroll in Credit Close-Up® for
-                  free FICO® Score monitoring, and explore My Wells Fargo Deals
-                  for personalized cash back offers. Download the Wells Fargo
-                  mobile app for convenient account management, instant
-                  transaction notifications, mobile check deposit, and secure
-                  messaging.
+                  Wells Fargo Online®, or via the Wells Fargo mobile app. Set up
+                  your online account access if you're not already a Wells Fargo
+                  customer, enroll in Wells Fargo Online® for online account
+                  management, enable paperless statements to avoid potential
+                  paper statement fees, set up autopay or payment reminders to
+                  avoid late fees, enroll in Credit Close-Up® for free FICO®
+                  Score monitoring, and explore My Wells Fargo Deals for
+                  personalized cash back offers. Download the Wells Fargo mobile
+                  app for convenient account management, instant transaction
+                  notifications, mobile check deposit, and secure messaging.
                 </p>
               </section>
 
@@ -568,9 +567,9 @@ export default function WellsFargoActiveCashCardRequirementsPage() {
                       account?
                     </h3>
                     <p className="text-sm text-gray-700 leading-5 text-left">
-                      A: Balance transfers to your Wells Fargo Active Cash®
-                      Card typically take 7-21 days to complete from the date
-                      Wells Fargo receives and processes your balance transfer
+                      A: Balance transfers to your Wells Fargo Active Cash® Card
+                      typically take 7-21 days to complete from the date Wells
+                      Fargo receives and processes your balance transfer
                       request. During this time, you must continue making at
                       least minimum payments on your other credit cards to avoid
                       late fees and credit damage—do not assume the transfer is
@@ -593,8 +592,8 @@ export default function WellsFargoActiveCashCardRequirementsPage() {
                       Rewards?
                     </h3>
                     <p className="text-sm text-gray-700 leading-5 text-left">
-                      A: Wells Fargo Rewards earned on the Active Cash® Card
-                      are cash back rewards, not transferable travel points like
+                      A: Wells Fargo Rewards earned on the Active Cash® Card are
+                      cash back rewards, not transferable travel points like
                       Chase Ultimate Rewards or American Express Membership
                       Rewards. However, you have flexible redemption options
                       including: cash back as statement credits applied to your

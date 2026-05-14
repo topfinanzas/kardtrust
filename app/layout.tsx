@@ -8,7 +8,6 @@ import "./globals.css";
 import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/gtm";
-import GoogleAds from "@/components/analytics/google-ads";
 import GoogleAdManager from "@/components/analytics/gam";
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmLinkInjector from "@/components/analytics/utm-link-injector";
@@ -191,7 +190,6 @@ export default function RootLayout({
 
         <ClientOnly>
           <GoogleTagManager />
-          <GoogleAds />
           <GoogleAdManager />
           {/* <AdZep /> */}
         </ClientOnly>

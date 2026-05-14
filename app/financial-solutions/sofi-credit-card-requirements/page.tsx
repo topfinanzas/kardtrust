@@ -711,11 +711,10 @@ export default function SoFiCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   <span className="font-semibold">Issuer Information:</span> The
                   SoFi Credit Card is issued by SoFi Bank, N.A., Member FDIC,
-                  pursuant to license by Mastercard® International
-                  Incorporated. The card can be used everywhere Mastercard is
-                  accepted. Mastercard is a registered trademark, and the
-                  circles design is a trademark of Mastercard International
-                  Incorporated.
+                  pursuant to license by Mastercard® International Incorporated.
+                  The card can be used everywhere Mastercard is accepted.
+                  Mastercard is a registered trademark, and the circles design
+                  is a trademark of Mastercard International Incorporated.
                 </p>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">

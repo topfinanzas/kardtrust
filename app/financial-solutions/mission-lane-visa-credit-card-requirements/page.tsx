@@ -605,10 +605,10 @@ export default function MissionLaneVisaCreditCardRequirementsPage() {
                       Q: Does Mission Lane require a security deposit?
                     </p>
                     <p className="text-gray-800 text-sm leading-5 font-light text-left">
-                      A: The Mission Lane Green Line Visa® and Silver Line
-                      Visa® require no security deposit. Only the Secured
-                      Visa® requires a refundable security deposit ranging from
-                      $200 to $1,000, which is equal to your credit limit.
+                      A: The Mission Lane Green Line Visa® and Silver Line Visa®
+                      require no security deposit. Only the Secured Visa®
+                      requires a refundable security deposit ranging from $200
+                      to $1,000, which is equal to your credit limit.
                     </p>
                   </div>
 

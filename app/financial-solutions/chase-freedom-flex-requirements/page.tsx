@@ -383,8 +383,8 @@ export default function ChaseFreedomFlexRequirementsPage() {
                 <p className="text-sm text-gray-700 leading-5 mb-4 text-left">
                   Cardholders gain access to Chase Ultimate Rewards, allowing
                   points earned on the Freedom Flex℠ to be combined with points
-                  from Chase Sapphire Preferred® or Reserve® cards and
-                  redeemed for enhanced value through the Chase travel portal or
+                  from Chase Sapphire Preferred® or Reserve® cards and redeemed
+                  for enhanced value through the Chase travel portal or
                   transferred to airline and hotel partners. The card integrates
                   with the Chase mobile app for instant notifications, spending
                   tracking, credit score monitoring through Credit Journey®,
@@ -552,12 +552,12 @@ export default function ChaseFreedomFlexRequirementsPage() {
                       A: Yes, one of the most powerful features of the Freedom
                       Flex℠ is the ability to transfer your cash back rewards to
                       a Chase Ultimate Rewards earning card like the Chase
-                      Sapphire Preferred® or Reserve®. Once transferred, you
-                      can redeem points at enhanced values (1.25 or 1.5 cents
-                      per point when booking travel through Chase) or transfer
-                      them to airline and hotel partners at a 1:1 ratio. This
-                      means your 5% quarterly categories can effectively become
-                      worth 7.5% - 10% or more when redeemed optimally through a
+                      Sapphire Preferred® or Reserve®. Once transferred, you can
+                      redeem points at enhanced values (1.25 or 1.5 cents per
+                      point when booking travel through Chase) or transfer them
+                      to airline and hotel partners at a 1:1 ratio. This means
+                      your 5% quarterly categories can effectively become worth
+                      7.5% - 10% or more when redeemed optimally through a
                       Sapphire card. To combine points, both cards must be under
                       the same name and linked to the same Chase Ultimate
                       Rewards account. The transfer is instant and can be done

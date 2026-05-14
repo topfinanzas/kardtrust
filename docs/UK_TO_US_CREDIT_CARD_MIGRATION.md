@@ -309,16 +309,16 @@ All UK-specific credit card and personal loan product references have been succe
 
 ### Credit Card Link Mapping
 
-| UK Product             | UK Path                                               | US Product                | US Path                                                                |
-| ---------------------- | ----------------------------------------------------- | ------------------------- | ---------------------------------------------------------------------- |
+| UK Product             | UK Path                                               | US Product               | US Path                                                                |
+| ---------------------- | ----------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------- |
 | Halifax Clarity        | `/financial-solutions/halifax-clarity-credit-card`    | Chase Sapphire Reserve®  | `/financial-solutions/chase-sapphire-reserve`                          |
 | Halifax World Elite    | `/financial-solutions/halifax-world-elite-mastercard` | Chase Sapphire Reserve®  | `/financial-solutions/chase-sapphire-reserve`                          |
-| Barclaycard Avios Plus | `/financial-solutions/barclaycard-avios-plus`         | Capital One Savor         | `/financial-solutions/capital-one-savor-rewards-credit-card-benefits`  |
-| Curve Card             | `/financial-solutions/curve-credit-card`              | Wells Fargo Autograph     | `/financial-solutions/wells-fargo-autograph-card-benefits`             |
+| Barclaycard Avios Plus | `/financial-solutions/barclaycard-avios-plus`         | Capital One Savor        | `/financial-solutions/capital-one-savor-rewards-credit-card-benefits`  |
+| Curve Card             | `/financial-solutions/curve-credit-card`              | Wells Fargo Autograph    | `/financial-solutions/wells-fargo-autograph-card-benefits`             |
 | Santander UK           | `/financial-solutions/santander-uk-credit-card`       | Wells Fargo Active Cash® | `/financial-solutions/wells-fargo-active-cash-card`                    |
 | Lloyds Bank            | `/financial-solutions/lloyds-bank-credit-card`        | Bank of America®         | `/financial-solutions/bank-of-america-unlimited-cash-rewards`          |
 | NatWest                | `/financial-solutions/natwest-credit-card`            | Citi® Double Cash        | `/financial-solutions/citi-double-cash-credit-card-benefits`           |
-| Virgin Money           | `/financial-solutions/virgin-money-credit-card`       | Capital One Savor         | `/financial-solutions/capital-one-savor-rewards-credit-card-benefits`  |
+| Virgin Money           | `/financial-solutions/virgin-money-credit-card`       | Capital One Savor        | `/financial-solutions/capital-one-savor-rewards-credit-card-benefits`  |
 | Monzo                  | `/financial-solutions/monzo-credit-card`              | Citi Custom Cash®        | `/financial-solutions/citi-custom-cash-card`                           |
 | Starling Bank          | `/financial-solutions/starling-bank-credit-card`      | Discover it®             | `/financial-solutions/discover-it-student-chrome-credit-card-benefits` |
 | TSB                    | `/financial-solutions/tsb-credit-card`                | Wells Fargo Active Cash® | `/financial-solutions/wells-fargo-active-cash-card`                    |
