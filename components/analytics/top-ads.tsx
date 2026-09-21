@@ -98,7 +98,18 @@ export default function TopAds() {
       />
       <Script
         id="topads-script"
-        src="https://topads.topnetworks.co/topAds.min.js"
+        // La query ?v= existe para poder invalidar la caché de los navegadores.
+        //
+        // topAds.min.js se sirvió durante meses con 'Cache-Control: immutable' y un año de
+        // max-age. Las copias ya guardadas conservan ESAS cabeceras: corregirlas en el
+        // servidor no alcanza a quien ya tiene el archivo, y el navegador no vuelve a
+        // pedirlo hasta 2027. Medido el 2026-09-21: un arreglo desplegado no llegaba a
+        // ningún visitante recurrente.
+        //
+        // Cambiar este valor crea una URL nueva, que ninguna caché tiene, y el arreglo llega
+        // de inmediato. Súbelo cada vez que se despliegue un cambio de topAds que deba
+        // llegar ya; si no, déjalo quieto y la caché de 5 minutos hace su trabajo.
+        src="https://topads.topnetworks.co/topAds.min.js?v=20260921"
         strategy="afterInteractive"
         data-cfasync="false"
         defer={true}
