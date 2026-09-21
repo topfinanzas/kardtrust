@@ -86,7 +86,7 @@ export function useAdZep() {
  */
 export function AdZepLinkHandler() {
   useEffect(() => {
-    // Only run in the browser
+    // Solo en el navegador
     if (typeof window === "undefined") return;
 
     const handleLinkClick = (event: Event) => {
@@ -146,13 +146,27 @@ export function AdZepNavigationHandler() {
 }
 
 /**
- * AdZep Centralized Handler
- * - Single centralized component for AdZep activation
- * - Integrates with navigation to call window.AdZepActivateAds() once per event
- * - Eliminates redundant calls and multiple invocation points
- * - Designed to be used in the Header component for consistent activation
- * - Includes debouncing to prevent rapid successive calls
+ * Manejador centralizado de AdZep
+ * - Único punto de activación de AdZep
+ * - Activa los anuncios EXACTAMENTE una vez por ruta, y nunca reactiva una ruta ya hecha
+ * - Pensado para usarse desde el componente Header
  */
+
+// A propósito en ámbito de módulo: deben sobrevivir a las re-ejecuciones del effect Y al
+// remontaje del componente.
+//
+// Antes vivían dentro del effect, así que se reiniciaban en cada cambio de pathname y el
+// debounce no podía abarcar una navegación. Junto con el listener de popstate que este
+// archivo registraba, eso producía un bug real: al cerrar un offerwall se disparaba una
+// nueva llamada a AdZepActivateAds() que RE-ARMABA el gate que el usuario acababa de
+// satisfacer. La página quedaba con el scroll bloqueado mostrando "View ad to continue", y
+// el segundo clic la desbloqueaba sin servir ningún anuncio, porque la vista ya estaba
+// acreditada.
+
+let lastActivatedPathname: string | null = null;
+let lastActivationTime = 0;
+const DEBOUNCE_DELAY = 500;
+
 export function AdZepCentralizedHandler() {
   const pathname = usePathname();
 
@@ -160,93 +174,76 @@ export function AdZepCentralizedHandler() {
     // Only run in the browser
     if (typeof window === "undefined") return;
 
-    // Debounce mechanism to prevent rapid successive calls
-    let lastActivationTime = 0;
-    const DEBOUNCE_DELAY = 500; // 500ms debounce
-
-    // Single activation function with proper error handling and debouncing
     const activateAds = () => {
-      const now = Date.now();
+      // Guarda dura: una activación por ruta. Reactivar re-arma los interstitials y
+      // offerwalls que el usuario ya satisfizo, que es lo que bloqueaba la página.
+      if (lastActivatedPathname === pathname) {
+        if (process.env.NODE_ENV === "development") {
+          logger.debug(
+            { module: "adzep", pathname },
+            "Activation skipped: already activated for this route",
+          );
+        }
+        return;
+      }
 
-      // Check if we're within the debounce period
+      const now = Date.now();
       if (now - lastActivationTime < DEBOUNCE_DELAY) {
         if (process.env.NODE_ENV === "development") {
           logger.debug(
-            {
-              module: "adzep",
-            },
+            { module: "adzep" },
             "Activation skipped due to debounce",
           );
         }
         return;
       }
 
-      if (window.AdZepActivateAds) {
-        try {
-          window.AdZepActivateAds();
-          lastActivationTime = now;
-
-          if (process.env.NODE_ENV === "development") {
-            logger.debug(
-              {
-                module: "adzep",
-                pathname,
-                timestamp: new Date().toISOString(),
-              },
-              "Centralized activation successful",
-            );
-          }
-        } catch (error) {
-          logger.warn(
-            {
-              module: "adzep",
-              error,
-            },
-            "Error during centralized activation",
-          );
-        }
-      } else {
+      if (!window.AdZepActivateAds) {
         if (process.env.NODE_ENV === "development") {
           logger.warn(
-            {
-              module: "adzep",
-            },
+            { module: "adzep" },
             "window.AdZepActivateAds not available",
           );
         }
+        return;
+      }
+
+      try {
+        window.AdZepActivateAds();
+        lastActivatedPathname = pathname;
+        lastActivationTime = now;
+
+        if (process.env.NODE_ENV === "development") {
+          logger.debug(
+            { module: "adzep", pathname, timestamp: new Date().toISOString() },
+            "Centralized activation successful",
+          );
+        }
+      } catch (error) {
+        logger.warn(
+          { module: "adzep", error },
+          "Error during centralized activation",
+        );
       }
     };
 
-    // Activate immediately if script is already loaded
+    // Aquí no hay listener de popstate, a propósito.
+    //
+    // usePathname() ya se actualiza con atrás/adelante del navegador en el App Router, así
+    // que este effect se vuelve a ejecutar y cubre esas navegaciones. El listener anterior
+    // era redundante Y dañino: los SDK de anuncios tocan el historial al cerrar su overlay,
+    // así que disparaba justo cuando el usuario terminaba el offerwall y re-armaba el gate.
     if (window.AdZepActivateAds) {
       activateAds();
-    } else {
-      // Single timeout to wait for script loading
-      const timeoutId = setTimeout(() => {
-        activateAds();
-      }, 1000);
-
-      return () => {
-        clearTimeout(timeoutId);
-      };
+      return;
     }
 
-    // Listen for browser navigation (back/forward)
-    const handleBrowserNavigation = () => {
-      // Use a shorter delay for browser navigation but still debounced
-      setTimeout(() => {
-        activateAds();
-      }, 100);
-    };
-
-    // Add browser navigation listener
-    window.addEventListener("popstate", handleBrowserNavigation);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener("popstate", handleBrowserNavigation);
-    };
-  }, [pathname]); // Trigger on pathname changes for Next.js navigation
+    // El script aún no ha cargado: se reintenta una vez. Una sola ruta de limpieza, a
+    // diferencia de la versión anterior, donde un return temprano hacía que el listener
+    // quedara registrado solo en algunos tiempos de carga.
+    const timeoutId = setTimeout(activateAds, 1000);
+    return () => clearTimeout(timeoutId);
+  }, [pathname]);
 
   return null;
 }

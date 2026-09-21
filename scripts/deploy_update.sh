@@ -47,7 +47,7 @@ fi
 print_step "[2/7] Checking for dependency updates..."
 if git diff HEAD@{1} HEAD --name-only | grep -q "package.json\|package-lock.json"; then
     print_step "Dependencies changed, running npm install..."
-    sudo npm install --production
+    sudo npm install
 else
     print_step "No dependency changes detected, skipping npm install"
 fi
