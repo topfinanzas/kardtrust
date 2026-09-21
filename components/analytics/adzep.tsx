@@ -148,11 +148,23 @@ export function AdZepNavigationHandler() {
 /**
  * AdZep Centralized Handler
  * - Single centralized component for AdZep activation
- * - Integrates with navigation to call window.AdZepActivateAds() once per event
- * - Eliminates redundant calls and multiple invocation points
+ * - Activates ads exactly ONCE per route, and never re-activates for a route already done
  * - Designed to be used in the Header component for consistent activation
- * - Includes debouncing to prevent rapid successive calls
  */
+
+// Module scope on purpose: these must survive effect re-runs AND component remounts.
+//
+// They used to live inside the effect, so they reset on every pathname change and the
+// debounce could not span navigations. Together with the popstate listener this file used
+// to register, that produced a real bug: closing an offerwall fired a fresh
+// AdZepActivateAds() call which RE-ARMED the gate the user had just satisfied. The page
+// stayed scroll-locked showing "View ad to continue", and the second click unlocked it
+// without serving a new ad, because the view had already been credited.
+
+let lastActivatedPathname: string | null = null;
+let lastActivationTime = 0;
+const DEBOUNCE_DELAY = 500;
+
 export function AdZepCentralizedHandler() {
   const pathname = usePathname();
 
@@ -160,93 +172,75 @@ export function AdZepCentralizedHandler() {
     // Only run in the browser
     if (typeof window === "undefined") return;
 
-    // Debounce mechanism to prevent rapid successive calls
-    let lastActivationTime = 0;
-    const DEBOUNCE_DELAY = 500; // 500ms debounce
-
-    // Single activation function with proper error handling and debouncing
     const activateAds = () => {
-      const now = Date.now();
+      // Hard guard: one activation per route. Re-activating re-arms interstitial and
+      // offerwall units the user has already satisfied, which is what locked the page.
+      if (lastActivatedPathname === pathname) {
+        if (process.env.NODE_ENV === "development") {
+          logger.debug(
+            { module: "adzep", pathname },
+            "Activation skipped: already activated for this route",
+          );
+        }
+        return;
+      }
 
-      // Check if we're within the debounce period
+      const now = Date.now();
       if (now - lastActivationTime < DEBOUNCE_DELAY) {
         if (process.env.NODE_ENV === "development") {
           logger.debug(
-            {
-              module: "adzep",
-            },
+            { module: "adzep" },
             "Activation skipped due to debounce",
           );
         }
         return;
       }
 
-      if (window.AdZepActivateAds) {
-        try {
-          window.AdZepActivateAds();
-          lastActivationTime = now;
-
-          if (process.env.NODE_ENV === "development") {
-            logger.debug(
-              {
-                module: "adzep",
-                pathname,
-                timestamp: new Date().toISOString(),
-              },
-              "Centralized activation successful",
-            );
-          }
-        } catch (error) {
-          logger.warn(
-            {
-              module: "adzep",
-              error,
-            },
-            "Error during centralized activation",
-          );
-        }
-      } else {
+      if (!window.AdZepActivateAds) {
         if (process.env.NODE_ENV === "development") {
           logger.warn(
-            {
-              module: "adzep",
-            },
+            { module: "adzep" },
             "window.AdZepActivateAds not available",
           );
         }
+        return;
+      }
+
+      try {
+        window.AdZepActivateAds();
+        lastActivatedPathname = pathname;
+        lastActivationTime = now;
+
+        if (process.env.NODE_ENV === "development") {
+          logger.debug(
+            { module: "adzep", pathname, timestamp: new Date().toISOString() },
+            "Centralized activation successful",
+          );
+        }
+      } catch (error) {
+        logger.warn(
+          { module: "adzep", error },
+          "Error during centralized activation",
+        );
       }
     };
 
-    // Activate immediately if script is already loaded
+    // No popstate listener here on purpose.
+    //
+    // usePathname() already updates on browser back/forward in the App Router, so this
+    // effect re-runs and handles those navigations. The old listener was redundant AND
+    // harmful: ad SDKs touch history when their overlay closes, so it fired right after
+    // the user finished an offerwall and re-armed the gate.
     if (window.AdZepActivateAds) {
       activateAds();
-    } else {
-      // Single timeout to wait for script loading
-      const timeoutId = setTimeout(() => {
-        activateAds();
-      }, 1000);
-
-      return () => {
-        clearTimeout(timeoutId);
-      };
+      return;
     }
 
-    // Listen for browser navigation (back/forward)
-    const handleBrowserNavigation = () => {
-      // Use a shorter delay for browser navigation but still debounced
-      setTimeout(() => {
-        activateAds();
-      }, 100);
-    };
-
-    // Add browser navigation listener
-    window.addEventListener("popstate", handleBrowserNavigation);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener("popstate", handleBrowserNavigation);
-    };
-  }, [pathname]); // Trigger on pathname changes for Next.js navigation
+    // Script not loaded yet: retry once. Single cleanup path, unlike the previous version
+    // where an early return meant the listener was registered only on some load timings.
+    const timeoutId = setTimeout(activateAds, 1000);
+    return () => clearTimeout(timeoutId);
+  }, [pathname]);
 
   return null;
 }
